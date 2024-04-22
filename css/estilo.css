@@ -176,6 +176,7 @@ height: 80%;
         background-color: azure;
         text-align: center;
         height: 80%;
+        margin: 0%;
         width: 100%; 
         font-size: 1.3rem;
         line-height: 3rem;
@@ -186,7 +187,9 @@ height: 80%;
         font-weight: bolder;        
     }
     .cajavideo1 video{       
-        padding-left: 100px;
+        padding-left: 50px;
+        margin: 0%;
+
     }        
     .productos{  
         grid-area: productos; 
