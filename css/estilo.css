@@ -8,6 +8,19 @@ body{
     background-attachment: fixed;
     background-image: url("../assets/zyro.png");       
 }
+.grid{
+    height: 100vh;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.7fr 1fr 1.7fr auto 0.3fr;
+    grid-template-areas: 
+    "menu menu" 
+    "carrusel carrusel"
+    "principal principal"
+    "productos productos"    
+    "footer footer";
+}
 .menu a:hover{
     font-weight: bolder;
     background-color: rgb(97, 105, 105);
@@ -16,10 +29,12 @@ body{
 .menu a{
     font-size: 1.8rem;
 }
-.carrusel{    
+.carrusel{   
+    grid-area: carrusel; 
     padding: 5rem;    
 }
-.productos{    
+.productos{  
+    grid-area: productos;  
     display: flex;    
     flex-wrap: wrap;    
     justify-content: space-between; 
@@ -30,6 +45,7 @@ body{
 margin-bottom: 25px;
 }
 .footer{
+    grid-area: footer;
    width: 100%;
    background-color: rgb(46, 46, 46);
    display: flex;
@@ -65,24 +81,17 @@ margin-bottom: 25px;
     display: block;        
     
 }
-.main .contacto label{ 
-font-size: x-large; 
-display: block;
-}
-.main .contacto legend{
-    font-size: 40px;
-    text-align: center;
-}
-.main .contacto input{
-    width: 200px;
-    height: 25px;
-}
 .creatudiseño{
     text-align: center;
     position: relative;
     z-index: 2; 
+    color: azure;
+ }
+ .creatudiseño p{
+    font-size: 5rem;
  }
 .menu{
+    grid-area: menu;
     position: relative;
     z-index: 2; 
 }
@@ -108,7 +117,80 @@ display: block;
    opacity: 0.5;
    mix-blend-mode: overlay;
 }
-.video{
-    width: 80%;
-    height: 80%;
-} 
+.video2{
+    grid-area: video2;
+}
+.principal{
+    grid-area: princial;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "cajavideo1 cajatexto" ;
+}
+.cajatexto{
+    margin-top: 50px;
+    background-color: azure;
+    text-align: center;
+    height: 60%;
+    width: 80%; 
+    font-size: 1.3rem;
+    line-height: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-seri
+}
+.cajatexto h2{
+    margin-top: 40px;
+    font-weight: bolder;
+}
+.cajavideo1 video{
+padding-left: 250px;
+height: 80%;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .grid{
+        height: 100vh;
+        margin: 0%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "menu" 
+        "carrusel"
+        "principal"
+        "productos"    
+        "footer";
+    }
+    .principal{
+        grid-area: princial;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "cajatexto"
+        "cajavideo1" ;
+    }
+    .cajatexto{       
+        background-color: azure;
+        text-align: center;
+        height: 80%;
+        width: 100%; 
+        font-size: 1.3rem;
+        line-height: 3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-seri
+    }
+    .cajatexto h2{
+        margin-top: 80px;
+        font-weight: bolder;        
+    }
+    .cajavideo1 video{       
+        padding-left: 100px;
+    }        
+    .productos{  
+        grid-area: productos; 
+        justify-content: center; 
+        text-align: center;  
+    }
+}
