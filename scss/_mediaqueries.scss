@@ -1,0 +1,45 @@
+@import "variables";
+
+// Media query para dispositivos móviles
+@media only screen and (max-width: 767px) {   
+ 
+  main {
+    padding: 30px; // Ajustar el relleno para dispositivos móviles
+
+  }
+
+  .principal {
+    @include flex-center;
+    flex-direction: column;
+    height: 750px;
+    width: 500px;
+     
+
+    .video-container {
+        margin-right: 500px;
+        width: 100%;
+      video {      
+        width: 80%;
+      }
+    }
+
+    .text-container {
+      text-align: center;
+      margin: 20px auto;
+
+      h2 {
+        font-size: 28px; // Tamaño ajustado para dispositivos móviles
+      }
+
+      p {
+        font-size: 16px; // Tamaño ajustado para dispositivos móviles
+      }
+    }
+  }
+
+  .productos {
+    @include flex-center;
+    flex-direction: column;    
+    padding: 20px; // Ajuste del relleno para dispositivos móviles
+    }
+}
