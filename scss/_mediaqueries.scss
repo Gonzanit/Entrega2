@@ -9,17 +9,13 @@
   }
 
   .principal {
-    @include flex-center;
-    flex-direction: column;
-    height: 750px;
-    width: 500px;
+    @include flex-center;    
      
 
-    .video-container {
-        margin-right: 500px;
+    .video-container {        
         width: 100%;
       video {      
-        width: 80%;
+        width: 100%;
       }
     }
 
@@ -33,13 +29,35 @@
 
       p {
         font-size: 16px; // Tamaño ajustado para dispositivos móviles
+        font-weight: bolder;
       }
     }
   }
-
   .productos {
     @include flex-center;
     flex-direction: column;    
     padding: 20px; // Ajuste del relleno para dispositivos móviles
+  }
+
+
+.video-formulario{
+  @include flex-center;
+  flex-direction: column-reverse;
+
+  .formulario-diseño{
+ margin-left:  250px;
+ width: 100%;
+  }
+
+  .video-sticker{
+    flex: 1; 
+    margin-right: 250px; 
+    width: 100%;   
+    video{      
+      width: 600px;
+      border-radius: 15%;            
     }
+    
+  }
+}
 }

@@ -31,7 +31,6 @@ main {
 }
 main .carrusel {
   grid-area: carrusel;
-  margin: 10px 150px 40px 150px;
 }
 main .principal {
   grid-area: principal;
@@ -40,7 +39,7 @@ main .principal {
   justify-content: center;
   background-color: rgba(223, 223, 223, 0.747);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 30px 100px 40px 100px;
+  margin: 30px 100px 40px 80px;
   border-radius: 20%;
 }
 main .principal .video-container {
@@ -48,7 +47,6 @@ main .principal .video-container {
 }
 main .principal .video-container video {
   border-radius: 25%;
-  margin-left: 300px;
 }
 main .principal .text-container {
   flex: 1;
@@ -159,16 +157,13 @@ footer img {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: 750px;
-    width: 500px;
+    flex-wrap: nowrap;
   }
   .principal .video-container {
-    margin-right: 500px;
     width: 100%;
   }
   .principal .video-container video {
-    width: 80%;
+    width: 100%;
   }
   .principal .text-container {
     text-align: center;
@@ -179,13 +174,35 @@ footer img {
   }
   .principal .text-container p {
     font-size: 16px;
+    font-weight: bolder;
   }
   .productos {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
     flex-direction: column;
     padding: 20px;
+  }
+  .video-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+  }
+  .video-formulario .formulario-diseño {
+    margin-left: 250px;
+    width: 100%;
+  }
+  .video-formulario .video-sticker {
+    flex: 1;
+    margin-right: 250px;
+    width: 100%;
+  }
+  .video-formulario .video-sticker video {
+    width: 600px;
+    border-radius: 15%;
   }
 }
 
