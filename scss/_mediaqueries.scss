@@ -3,61 +3,58 @@
 // Media query para dispositivos móviles
 @media only screen and (max-width: 767px) {   
  
-  main {
-    padding: 30px; // Ajustar el relleno para dispositivos móviles
-
-  }
-
-  .principal {
-    @include flex-center;    
-     
-
-    .video-container {        
-        width: 100%;
-      video {      
-        width: 100%;
-      }
+  main {  
+    .carrusel{
+      margin: 0;
     }
 
-    .text-container {
-      text-align: center;
-      margin: 20px auto;
+  .principal {
+    @include flex-center;  
+    margin: 30px 20px 40px 20px;
+    border-radius: 5%;
+    flex-direction: column-reverse;
+      
+    .video-container {   
+     margin: 0 auto;
 
-      h2 {
-        font-size: 28px; // Tamaño ajustado para dispositivos móviles
+      video {  
+        width: 250px;
       }
-
+    }
+    .text-container { 
+      margin: auto;      
+      h2 {
+        font-size: 28px; // Tamaño ajustado para dispositivos móviles       
+      }
       p {
         font-size: 16px; // Tamaño ajustado para dispositivos móviles
-        font-weight: bolder;
       }
     }
   }
   .productos {
-    @include flex-center;
-    flex-direction: column;    
-    padding: 20px; // Ajuste del relleno para dispositivos móviles
+    @include flex-center;  
+    flex-direction: column;  
   }
 
 
 .video-formulario{
-  @include flex-center;
-  flex-direction: column-reverse;
+  @include flex-center;  
+  flex-direction: column-reverse;  
 
   .formulario-diseño{
- margin-left:  250px;
- width: 100%;
+    margin: 0 auto;
+    width: 100%;
   }
 
-  .video-sticker{
-    flex: 1; 
-    margin-right: 250px; 
-    width: 100%;   
+  .video-sticker{ 
+      
     video{      
-      width: 600px;
-      border-radius: 15%;            
+      width: 350px;
+      border-radius: 15%; 
+      margin: 0;           
     }
     
   }
+}
 }
 }

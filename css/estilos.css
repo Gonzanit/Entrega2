@@ -31,6 +31,7 @@ main {
 }
 main .carrusel {
   grid-area: carrusel;
+  margin: 0px 150px 100px 150px;
 }
 main .principal {
   grid-area: principal;
@@ -44,6 +45,7 @@ main .principal {
 }
 main .principal .video-container {
   flex: 1;
+  margin-left: 250px;
 }
 main .principal .video-container video {
   border-radius: 25%;
@@ -51,6 +53,7 @@ main .principal .video-container video {
 main .principal .text-container {
   flex: 1;
   text-align: center;
+  margin-right: 250px;
 }
 main .principal h2 {
   color: #000;
@@ -99,6 +102,22 @@ main .video-formulario {
   align-items: center;
   justify-content: center;
 }
+main .video-formulario .botones .btn-success {
+  background-color: rgba(32, 117, 245, 0.9254901961) !important;
+  border-color: rgba(0, 50, 124, 0.6784313725) !important;
+}
+main .video-formulario .botones .btn-success:hover {
+  background-color: rgba(0, 50, 124, 0.6784313725) !important;
+  border-color: rgba(0, 50, 124, 0.6784313725) !important;
+}
+main .video-formulario .botones .btn-danger {
+  background-color: rgba(199, 75, 75, 0.8156862745) !important;
+  border-color: #580009 !important;
+}
+main .video-formulario .botones .btn-danger:hover {
+  background-color: #580009 !important;
+  border-color: #580009 !important;
+}
 main .video-formulario .video-sticker {
   flex: 1;
 }
@@ -130,6 +149,22 @@ main .contacto h2 {
   font-size: 3rem;
   padding-bottom: 60px;
 }
+main .contacto .botones .btn-success {
+  background-color: rgba(32, 117, 245, 0.9254901961) !important;
+  border-color: rgba(0, 50, 124, 0.6784313725) !important;
+}
+main .contacto .botones .btn-success:hover {
+  background-color: rgba(0, 50, 124, 0.6784313725) !important;
+  border-color: rgba(0, 50, 124, 0.6784313725) !important;
+}
+main .contacto .botones .btn-danger {
+  background-color: rgba(199, 75, 75, 0.8156862745) !important;
+  border-color: #580009 !important;
+}
+main .contacto .botones .btn-danger:hover {
+  background-color: #580009 !important;
+  border-color: #580009 !important;
+}
 main .stickers {
   color: #fdfdfd;
   background-color: rgba(0, 0, 0, 0.7411764706);
@@ -150,59 +185,55 @@ footer img {
 }
 
 @media only screen and (max-width: 767px) {
-  main {
-    padding: 30px;
+  main .carrusel {
+    margin: 0;
   }
-  .principal {
+  main .principal {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Ajustar contenido horizontalmente */
+    align-items: center; /* Ajustar contenido verticalmente */
     flex-wrap: nowrap;
+    margin: 30px 20px 40px 20px;
+    border-radius: 5%;
+    flex-direction: column-reverse;
   }
-  .principal .video-container {
-    width: 100%;
+  main .principal .video-container {
+    margin: 0 auto;
   }
-  .principal .video-container video {
-    width: 100%;
+  main .principal .video-container video {
+    width: 250px;
   }
-  .principal .text-container {
-    text-align: center;
-    margin: 20px auto;
+  main .principal .text-container {
+    margin: auto;
   }
-  .principal .text-container h2 {
+  main .principal .text-container h2 {
     font-size: 28px;
   }
-  .principal .text-container p {
+  main .principal .text-container p {
     font-size: 16px;
-    font-weight: bolder;
   }
-  .productos {
+  main .productos {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Ajustar contenido horizontalmente */
+    align-items: center; /* Ajustar contenido verticalmente */
     flex-wrap: nowrap;
     flex-direction: column;
-    padding: 20px;
   }
-  .video-formulario {
+  main .video-formulario {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Ajustar contenido horizontalmente */
+    align-items: center; /* Ajustar contenido verticalmente */
     flex-wrap: nowrap;
     flex-direction: column-reverse;
   }
-  .video-formulario .formulario-diseño {
-    margin-left: 250px;
+  main .video-formulario .formulario-diseño {
+    margin: 0 auto;
     width: 100%;
   }
-  .video-formulario .video-sticker {
-    flex: 1;
-    margin-right: 250px;
-    width: 100%;
-  }
-  .video-formulario .video-sticker video {
-    width: 600px;
+  main .video-formulario .video-sticker video {
+    width: 350px;
     border-radius: 15%;
+    margin: 0;
   }
 }
 

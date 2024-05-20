@@ -2,8 +2,10 @@
 
 main{
     background-color: $background-color;
+    
     .carrusel {
-      grid-area: carrusel;          
+      grid-area: carrusel; 
+      margin: 0px 150px 100px 150px ;         
     }
     .principal {
       grid-area: principal;
@@ -17,6 +19,7 @@ main{
       
       .video-container {
         flex: 1;
+        margin-left: 250px;
        video{
         border-radius: 25%;       
        }
@@ -25,6 +28,7 @@ main{
       .text-container {
         flex: 1;
         text-align: center;
+        margin-right: 250px;
         
       }
     
@@ -78,6 +82,15 @@ main{
       display: flex;
       align-items: center;
       justify-content: center;
+
+     .botones{
+      .btn-success {
+        @include boton-estilos(#2075f5ec, #00327cad, #00327cad);
+      }
+    .btn-danger {
+      @include boton-estilos(#c74b4bd0, #580009, #580009);
+    }
+}
     
       .video-sticker{
         flex: 1;    
@@ -110,11 +123,20 @@ main{
       padding: 180px 90px 180px 90px;
       text-align: center;
       h2{
-     color: #fdfdfd;
-     font-size: 3rem;
-    padding-bottom: 60px;
+      color: #fdfdfd;
+      font-size: 3rem;
+      padding-bottom: 60px;
+      }  
+      
+      .botones{
+        .btn-success {
+          @include boton-estilos(#2075f5ec, #00327cad, #00327cad);
+        }
+      .btn-danger {
+        @include boton-estilos(#c74b4bd0, #580009, #580009);
       }
-    }   
+    }
+  }  
     
     .stickers{
       
@@ -125,3 +147,5 @@ main{
       max-width: 400px;
     }
   }
+
+
